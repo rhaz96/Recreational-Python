@@ -2,8 +2,8 @@ import os
 from PIL import Image
 import numpy as np
 
+# store original toy train images in folder called train_pics
 os.chdir("train_pics")
-# store the original moon image files names here
 for image in os.listdir()[1:]:
     with Image.open(image) as img:
         img_resize = img.resize((464, 348), Image.ANTIALIAS)
